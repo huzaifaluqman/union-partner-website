@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <title>Union Partners</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- <section navbar> -->
+  <section class="header_wrapper sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white h-25">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="" width="100" class="d-inline-block align-text-top" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">
+                <i class="fa-solid fa-layer-group"></i> Demos
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" style="border-bottom: 1px solid grey" href="#">
+                    <i class="fa-solid fa-house-user"></i> Real Estate</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" style="border-bottom: 1px solid grey" href="#">
+                    <i class="fa-solid fa-house-user"></i> Car finder
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" style="border-bottom: 1px solid grey" href="#"><i
+                      class="fa-solid fa-graduation-cap"></i> job board
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-house-user"></i> city guide
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" style="border-bottom: 1px solid grey" href="#">
+                    hompage v.1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"> homepage v.2 </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Catalogy
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">property for rent</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">property for sale</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">property for buy</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Account
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"> personal info</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"> sign in </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"> sign out </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Reviews</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Vendor
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" style="border-bottom: 1px solid grey" href="#">
+                    Add properties
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"> property pormotion </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a class="text-start btn my-2 my-lg-0 mx-2 text-danger" href="#" id="login-btn"><i
+              class="fa-solid fa-person"></i>
+            Sign
+            In</a>
+          <button type="button" class="btn btn-danger">
+            <i class="fa-solid fa-plus"></i> Add property
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- <section>login</section> -->
+  <section class="log-in">
+    <div class="login-form-container">
+      <form action="#" id="login-form" class="card box p-3 w-25">
+        <h4>Register</h4>
+
+        <i class="fas fa-times float-end p-2" id="form-close"></i>
+        <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque.
+        </p>
+        <input type="text" id="userName" class=" border-0 border-bottom mb-2" placeholder="Enter your Name">
+        <input type="text" id="userAdres" class="border-0 border-bottom mb-2" placeholder="Username">
+        <input type="email" id="userEmail" class="border-0 border-bottom mb-2" placeholder="Enter your Email">
+        <input type="password" id="userPassword" class="border-0 border-bottom mb-2" placeholder="password"><br>
+        <input type="checkbox" class="me-2 rounded">I accept all terms and conditions.
+        <a class="btn btn-danger float-end ms-3" onmouseenter="myValue();">LOGIN</a>
+        <div class="footer mt-5">
+          <h6>Using other social media links</h6>
+          <hr>
+          <a class="btn btn-primary">facebook</a>
+          <a class="btn btn-primary">instagram</a>
+          <a class="btn btn-primary">twitter</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- <section 1st part> -->
+  <section class="hero pb-lg-2 py-lg-5 text-center text-sm-start">
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <div>
+        <h1 class="fw-bold" style="font-size: 4rem">
+          Easy way to find a perfect
+          <span class="text-danger">property</span>
+        </h1>
+        <p class="lead my-4">
+          We provide a complete service for the sale, purchase or rental of
+          real estate. We have been operating more than 10 years. Search
+          millions of apartments and houses on Finder.
+        </p>
+      </div>
+      <img src="images/house.jpg" class="w-100 h-100 img-fluid" />
+    </div>
+  </section>
+
+  <!-- section 6 columns -->
+  <section class="box p-3 text-center justify-content-around">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-4 mb-lg-0">
+        <div class="card">
+          <div class="card_icon p-3">
+            <a class="card_link p-2" href="#">
+              <i class="fa-solid fa-house"></i></a>
+          </div>
+          <div class="title p-1">
+            <a href="#">
+              <h6>House</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 mb-4 mb-lg-0">
+        <div class="card">
+          <div class="card_icon p-3">
+            <a class="card_link p-2" href="#">
+              <i class="fa-solid fa-industry"></i></a>
+          </div>
+          <div class="title p-1">
+            <a href="#">
+              <h6>Appartment</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 mb-4 mb-lg-0">
+        <div class="card">
+          <div class="card_icon p-3">
+            <a class="card_link p-2" href="#">
+              <i class="fa-solid fa-dumpster-fire"></i></a>
+          </div>
+          <div class="title p-1">
+            <a href="#">
+              <h6>Commercial</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 mb-4 mb-lg-0">
+        <div class="card">
+          <div class="card_icon p-3">
+            <a class="card_link p-2" href="#">
+              <i class="fa-solid fa-house-user"></i></a>
+          </div>
+          <div class="title p-1">
+            <a href="#">
+              <h6>Rent</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 mb-4 mb-lg-0">
+        <div class="card">
+          <div class="card_icon p-3">
+            <a class="card_link p-2" href="#">
+              <i class="fa-solid fa-building"></i></a>
+          </div>
+          <div class="title p-1">
+            <a href="#">
+              <h6>New building</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 mb-4 mb-lg-0">
+        <div class="card">
+          <div class="card_icon p-3">
+            <a class="card_link p-2" href="#">
+              <i class="fa-solid fa-ellipsis"></i></a>
+          </div>
+          <div class="title p-1">
+            <a href="#">
+              <h6>More</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section orders -->
+  <section class="property my-3 p-2 d-md-flex text-center">
+    <div class="card mx-md-2 my-2 ">
+      <img src="images/start.jpg" class="img-fluid border-0" />
+      <h2>Buy a property</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim autem
+        quasi quisquam perspiciatis repellat pariatur.
+      </p>
+      <button class="btn btn-outline-danger mb-5">Find a home</button>
+    </div>
+    <div class="card mx-md-2 my-2">
+      <img src="images/start4.jpg" class="img-fluid " />
+      <h2>Sell a property</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim autem
+        quasi quisquam perspiciatis repellat pariatur.
+      </p>
+      <button class="btn btn-outline-danger mb-5">Place an order</button>
+    </div>
+    <div class="card mx-md-2 my-2">
+      <img src="images/startt.png" class="img-fluid border-0" />
+      <h2>Rent a property</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim autem
+        quasi quisquam perspiciatis repellat pariatur.
+      </p>
+      <button class="btn btn-outline-danger mb-5">Find a rental</button>
+    </div>
+    </div>
+  </section>
+
+  <!-- <section top offers> -->
+  <section class="top-offers">
+    <div class="offers">
+      <h2 class="fw-bold p-lg-2">Top Offers</h2>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img src="images/item9.png" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>3 bed rooms | 70 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 16,999</h6>
+              <hr>
+              <p class="text-center text-secondary">1<i class="pe-3 fa-solid fa-house-chimney"></i>3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i>2 <i class="pe-3 fa-solid fa-car"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide ">
+          <div class="card" style="width: 18rem;">
+            <img src="images/card1.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>3 bed rooms | 70 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 16,999</h6>
+              <hr>
+              <p class="text-center text-secondary"> 1<i class="pe-3 fa-solid fa-house-chimney"></i> 3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i> 2 <i class="pe-3 fa-solid fa-car"></i> </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide ">
+          <div class="card" style="width: 18rem;">
+            <img src="images/card2.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>2 bed rooms | 40 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 14,999</h6>
+              <hr>
+              <p class="text-center text-secondary">1<i class="pe-3 fa-solid fa-house-chimney"></i>3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i>2 <i class="pe-3 fa-solid fa-car"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide ">
+          <div class="card" style="width: 18rem;">
+            <img src="images/item6.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>3 bed rooms | 70 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 16,999</h6>
+              <hr>
+              <p class="text-center text-secondary">1<i class="pe-3 fa-solid fa-house-chimney"></i>3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i>2 <i class="pe-3 fa-solid fa-car"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img src="images/card3.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>3 bed rooms | 70 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 16,999</h6>
+              <hr>
+              <p class="text-center text-secondary">1<i class="pe-3 fa-solid fa-house-chimney"></i>3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i>2 <i class="pe-3 fa-solid fa-car"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img src="images/item8.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>3 bed rooms | 70 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 16,999</h6>
+              <hr>
+              <p class="text-center text-secondary">1<i class="pe-3 fa-solid fa-house-chimney"></i>3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i>2 <i class="pe-3 fa-solid fa-car"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img src="images/item7.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>3 bed rooms | 70 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 16,999</h6>
+              <hr>
+              <p class="text-center text-secondary">1<i class="pe-3 fa-solid fa-house-chimney"></i>3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i>2 <i class="pe-3 fa-solid fa-car"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img src="images/item5.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>3 bed rooms | 70 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 16,999</h6>
+              <hr>
+              <p class="text-center text-secondary">1<i class="pe-3 fa-solid fa-house-chimney"></i>3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i>2 <i class="pe-3 fa-solid fa-car"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem;">
+            <img src="images/item8.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-start">
+              <a href="#">
+                <p>FOR RENT</p>
+                <h5>3 bed rooms | 70 sq.m</h5>
+              </a>
+              <p class="card-text">Some quick example of the card's content.</p>
+              <h6> $ 16,999</h6>
+              <hr>
+              <p class="text-center text-secondary">1<i class="pe-3 fa-solid fa-house-chimney"></i>3 <i
+                  class="fa-solid fa-toilet pe-3"></i></i>2 <i class="pe-3 fa-solid fa-car"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </section>
+
+  <!-- <section>houses</section> -->
+  <section class="houses">
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" style="font-size: 2rem" href="#">Added today</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link m-1 d-none d-md-block house" aria-current="page" href="#">Appartments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-white fw-bold m-1 d-none d-md-block house active" href="#">Houses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link m-1 d-none d-md-block house" href="#">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link m-1 d-none d-md-block house" href="#">Commercial</a>
+            </li>
+          </ul>
+          <a href="#"><span class="navbar-text fs-1rem">
+              view all
+              <i class="fa-solid fa-arrow-right-long"></i> </span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="row container-fluid">
+      <div class="col-sm-5">
+        <div class="card text-bg-dark overflow-hidden" style="height: 550px;">
+          <img src="images/house4.jpeg" class="card-img h-100">
+          <div class="card-img-overlay">
+            <span class="img-gradient-overlay text-end p-4"><i
+                class="fa-regular fa-heart bg-primary p-2 rounded"></i></span>
+            <div class="card-body content-overlay">
+              <span class="bg-success d-table mb-1 p-1 rounded">verified</span>
+              <span class="bg-primary d-table mb-1 p-1 rounded">new</span>
+            </div>
+            <div class="card-footer border-0" style="margin-top: 150px;">
+              <div class="justify-content-between d-sm-flex pt-5 mt-sm-5">
+                <a href="#" class="pe-2 text-light">
+                  <div class="fs-sm text-uppercase">For Rental</div>
+                  <h2 class="fw-bold">Luxury Rental Villa</h2>
+                  <div class="fs-sm opacity-75">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                </a>
+                <div class="btn-group mt-2 mt-sm-5">
+                  <button class="btn btn-primary">
+                    3500$
+                  </button>
+                  <button class="btn btn-primary border-start">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-7">
+        <div class="card text-bg-dark overflow-hidden mt-3" style="height: 250px;">
+          <img src="images/house2.jpg" class="card-img img-fluid" />
+          <div class="card-img-overlay">
+            <span class="img-gradient-overlay text-end p-4"><i
+                class="fa-regular fa-heart bg-primary p-2 rounded"></i></span>
+            <div class="card-body content-overlay">
+              <span class="bg-primary d-table mb-1 p-1 rounded">new</span>
+            </div>
+            <div class="card-footer border-0">
+              <div class="justify-content-between d-sm-flex mt-sm-5">
+                <a class="pe-2 text-light">
+                  <div class="fs-sm text-uppercase">For Sale</div>
+                  <h2 class="fw-bold">Duplex with Garage</h2>
+                  <div class="fs-sm opacity-75">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                </a>
+                <div class="btn-group d-flex mt-sm-5">
+                  <button class="btn btn-primary">
+                    From 2000$
+                  </button>
+                  <button class="btn btn-primary border-start">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card text-bg-dark overflow-hidden mt-3" style="height: 250px;">
+          <img src="images/house3.jpg" class="card-img img-fluid" />
+          <div class="card-img-overlay">
+            <span class="img-gradient-overlay text-end p-4"><i
+                class="fa-regular fa-heart bg-primary p-2 rounded"></i></span>
+            <div class="card-body content-overlay">
+              <span class="bg-primary d-table mb-1 p-1 rounded">new</span>
+            </div>
+            <div class="card-footer border-0">
+              <div class="justify-content-between d-sm-flex mt-sm-5">
+                <a class="pe-2 text-light">
+                  <div class="fs-sm text-uppercase">For sale</div>
+                  <h2 class="fw-bold">Country house</h2>
+                  <div class="fs-sm opacity-75">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                </a>
+                <div class="btn-group d-flex mt-sm-5">
+                  <button class="btn btn-primary">
+                    From 3900$
+                  </button>
+                  <button class="btn btn-primary border-start">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- <section calculator -->
+  <section class="calculator d-md-flex justify-content-between p-2">
+    <div class="box-img col">
+      <img src="images/cal-man.jpg" class="img-fluid d-block" alt="" />
+    </div>
+    <div class="box-data col">
+      <h1 class="fw-bold">Calculate the cost of your property</h1>
+      <p class="lead pt-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
+        delectus eaque obcaecati nulla aut iusto vero iure, quia aliquid
+        numquam? Quas fugiat inventore quod porro, unde nulla distinctio
+        consequuntur facere?
+      </p>
+      <button class="btn mt-3 btn-danger">
+        <i class="fa-solid fa-calculator"></i> Calculate
+      </button>
+    </div>
+  </section>
+
+  <!-- <section>swiper</section> -->
+  <section class="city mt-lg-3">
+    <div class="city-heading p-3 fw-bold">
+      <h2>Search property by city</h2>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem">
+            <img src="images/city1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h6 class="card-text text-center">New york</h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem">
+            <img src="images/city2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h6 class="card-text text-center">Dubai</h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem">
+            <img src="images/city7.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h6 class="card-text text-center">Canada</h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem">
+            <img src="images/city4.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h6 class="card-text text-center">London</h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem">
+            <img src="images/city5.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h6 class="card-text text-center">Austarlia</h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem">
+            <img src="images/city1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h6 class="card-text text-center">Chiango</h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card" style="width: 18rem">
+            <img src="images/city7.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h6 class="card-text text-center">America</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- <section>partners</section> -->
+  <section class="sites justify-content-around">
+    <div class="site-data p-2">
+      <h1>Our partners</h1>
+    </div>
+    <div class="row container-fluid">
+      <div class="col">
+        <img src="images/state1.jpg" alt="..." class="img-fluid partners" />
+      </div>
+      <div class="col">
+        <img src="images/state 2.png" alt="..." class="img-fluid partners" />
+      </div>
+      <div class="col">
+        <img src="images/state3.jpg" alt="..." class="img-fluid partners" />
+      </div>
+      <div class="col">
+        <img src="images/state4.jpg" alt="..." class="img-fluid partners" />
+      </div>
+      <div class="col">
+        <img src="images/state 5.png" alt="..." class="img-fluid partners" />
+      </div>
+      <div class="col">
+        <img src="images/state6.jpg" alt="..." class="img-fluid partners" />
+      </div>
+    </div>
+  </section>
+
+  <!-- <section>review</section> -->
+  <section class="agents">
+    <div class="agent">
+      <h2 class="fw-bold my-lg-2">Top Real Estate Agents</h2>
+    </div>
+    <div class="review container">
+      <div class="swiper reviewSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="review-box d-flex">
+              <div class="review1">
+                <div class="review-coment card text-start" style="width: 530px;">
+                  <h2>"I will provide you the best services."</h2>
+                  <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi excepturi
+                    officia porro ab quia sequi iure corrupti obcaecati unde temporibus! Quo deleniti corrupti dicta?
+                    Architecto minus quos numquam quidem sit.</p>
+                  <div class="person d-flex">
+                    <div class="name">
+                      <h5>Huzaifa khan</h5>
+                      <p class=" text-secondary">Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="stars text-danger ms-5">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                      <p class="text-secondary">Reviews</p>
+                    </div>
+                  </div>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-facebook"></i></a>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-twitter"></i></a>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="review-img">
+                  <img src="images/pic-1.png" class="rounded d-none d-sm-block">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-box d-flex">
+              <div class="review1">
+                <div class="review-coment card text-start">
+                  <h2>"I will provide you the best services."</h2>
+                  <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi excepturi
+                    officia porro ab quia sequi iure corrupti obcaecati unde temporibus! Quo deleniti corrupti dicta?
+                    Architecto minus quos numquam quidem sit.</p>
+                  <div class="person d-flex">
+                    <div class="name">
+                      <h5>Huzaifa khan</h5>
+                      <p class=" text-secondary">Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="stars text-danger ms-5">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                      <p class="text-secondary">Reviews</p>
+                    </div>
+                  </div>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-facebook"></i></a>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-twitter"></i></a>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="review-img">
+                  <img src="images/pic-2.png" class="rounded d-none d-sm-block">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-box d-flex">
+              <div class="review1">
+                <div class="review-coment card text-start">
+                  <h2>"I will provide you the best services."</h2>
+                  <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi excepturi
+                    officia porro ab quia sequi iure corrupti obcaecati unde temporibus! Quo deleniti corrupti dicta?
+                    Architecto minus quos numquam quidem sit.</p>
+                  <div class="person d-flex">
+                    <div class="name">
+                      <h5>Huzaifa khan</h5>
+                      <p class=" text-secondary">Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="stars text-danger ms-5">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                      <p class="text-secondary">Reviews</p>
+                    </div>
+                  </div>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-facebook"></i></a>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-twitter"></i></a>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="review-img">
+                  <img src="images/pic-3.png" class="rounded d-none d-sm-block">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-box d-flex">
+              <div class="review1">
+                <div class="review-coment card text-start">
+                  <h2>"I will provide you the best services."</h2>
+                  <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi excepturi
+                    officia porro ab quia sequi iure corrupti obcaecati unde temporibus! Quo deleniti corrupti dicta?
+                    Architecto minus quos numquam quidem sit.</p>
+                  <div class="person d-flex">
+                    <div class="name">
+                      <h5>Huzaifa khan</h5>
+                      <p class=" text-secondary">Lorem ipsum dolor sit amet.
+                      </p>
+                    </div>
+                    <div class="stars text-danger ms-5">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                      <p class="text-secondary">Reviews</p>
+                    </div>
+                  </div>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-facebook"></i></a>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-twitter"></i></a>
+                  <a class="btn btn-primary rounded-circle bg-danger"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="review-img">
+                  <img src="images/pic-4.png" class="rounded d-none d-sm-block">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next text-danger"></div>
+        <div class="swiper-button-prev text-danger"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section>footer</section> -->
+  <section class="footer bg-secondary text-light">
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="fw-bold fs-md text-info">UNI<span class="text-danger">ON</span></h5>
+            <ul class="nav flex-column text-light">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="fw-bold">COUNTRY</h5>
+            <ul class="nav flex-column text-light">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5 class="fw-bold">ABOUT</h5>
+            <ul class="nav flex-column text-light">
+              <li class="nav-item mb-2"><a href="#" class="nav-link text-white p-0 ">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link text-white p-0 ">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link text-white p-0 ">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link text-white p-0 ">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link text-white p-0 ">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <h5 class="fw-bold">Recent posts</h5>
+            <div class="card mb-3 bg-secondary text-light" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="images/item-1.jpeg" class="img-fluid rounded mt-lg-4" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <span class="text-danger">HOME IMPROVEMENT</span>
+                    <p><a href="#" class="fw-bold">Lorem ipsum dolor sit amet.</a></p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, culpa.</p>
+                    29 july, 2022
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="card my-3 rounded container px-5" style="background-color: #10103d;">
+          <div class="card-body rounded">
+            <div class="app d-md-flex justify-content-lg-between p-3 rounded">
+              <img src="images/chat.jpg" class="mx-lg-5">
+              <div class="app-content">
+                <h2 class="title">Download our app</h2>
+                <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ad sint odit
+                  et numquam aut.</p>
+              </div>
+              <div class="buttons">
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa-brands fa-apple text-center"></i>
+                  APPSTORE</button>
+                <button type="button" class="btn btn-secondary mt-lg-2 btn-lg"><i class="fa-solid fa-play"></i> GOOGLE
+                  PLAY</button>
+              </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>&copy; 2022, All rights reserved. Made by <a target="_blank"
+                  href="//www.linkedin.com/in/huzaifa-luqman" class="fs-5 fw-bold">Huzaifa
+                  khan</a></p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-1"><a class="btn btn-primary rounded-circle"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li class="ms-1"><a class="btn btn-primary rounded-circle"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="ms-1"><a class="btn btn-primary rounded-circle"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+      </footer>
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
